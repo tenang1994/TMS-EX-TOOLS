@@ -355,7 +355,7 @@
             <span class="close-button">×</span>
             <h2 id="modalTitle">Tool Title</h2>
             <div id="modalBody" class="modal-body">
-                <!-- pub-9719662638399960 -->
+                <!-- Tool-specific content will be injected here -->
             </div>
             <div id="modalAlert" class="modal-alert" style="display:none;"></div>
         </div>
@@ -1201,7 +1201,7 @@
             qrCodeGenerator: (container) => {
                 container.innerHTML = `
                     <label for="qrText">Text or URL for QR Code:</label>
-                    <textarea id="qrText" placeholder="pub-9719662638399960"></textarea>
+                    <textarea id="qrText" placeholder="Enter text here"></textarea>
                     <label for="qrSize">Size (pixels):</label>
                     <input type="number" id="qrSize" value="200" min="50" max="500">
                     <button id="generateQrBtn">Generate QR Code</button>
@@ -1251,7 +1251,7 @@
                 generateBtn.onclick = () => {
                     const text = textInput.value.trim();
                     const size = parseInt(sizeInput.value);
-                    if (!text) {pub-9719662638399960
+                    if (!text) {
                         showAlert('Please enter text or URL.', 'error');
                         return;
                     }
@@ -1350,7 +1350,7 @@
 
             wordCounter: (container) => {
                 container.innerHTML = `
-                    <textarea id="wcText" placeholder="Paste or pub-9719662638399960..." rows="8"></textarea>
+                    <textarea id="wcText" placeholder="Paste or type your text here..." rows="8"></textarea>
                     <div id="wcResult" class="result-area" style="margin-top:1rem;">
                         Words: <strong id="wcWords">0</strong><br>
                         Characters: <strong id="wcCharsWithSpaces">0</strong><br>
@@ -1606,7 +1606,7 @@
 
             jsonFormatter: (container) => {
                 container.innerHTML = `
-                    <textarea id="jsonInput" placeholder="pub-9719662638399960..." rows="7"></textarea>
+                    <textarea id="jsonInput" placeholder="Paste your JSON data here..." rows="7"></textarea>
                     <button id="formatJsonBtn">Format / Validate</button>
                     <textarea id="jsonOutput" readonly rows="7" placeholder="Formatted JSON will appear here..."></textarea>
                 `;
